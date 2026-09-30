@@ -1,0 +1,99 @@
+.app {
+  height: 100dvh;
+  display: flex;
+  background: var(--bg-chat);
+}
+
+.frame {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+}
+
+.sidebarSlot {
+  display: contents;
+}
+
+.gate {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.gateCard {
+  max-width: 520px;
+  width: 100%;
+  background: var(--bg-surface);
+  border-radius: 22px;
+  box-shadow: var(--shadow-md);
+  padding: 30px 30px 26px;
+  text-align: center;
+  animation: max-pop 0.3s ease-out both;
+}
+
+.gateGlyph {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  border-radius: 20px;
+  background: var(--max-purple-soft);
+  color: var(--max-purple);
+}
+
+.gateTitle {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.gateText {
+  margin: 0 0 18px;
+  color: var(--text-secondary);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.gateActions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 11px 16px;
+  font-size: 14px;
+  font-weight: 650;
+  text-decoration: none;
+  background: var(--max-purple-soft);
+  color: var(--max-purple-press);
+  transition: background 0.15s ease;
+}
+
+.button:hover {
+  background: var(--max-purple-line);
+}
+
+.buttonGhost {
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.buttonGhost:hover {
+  background: var(--bg-hover);
+}
+
+@media (max-width: 860px) {
+  .sidebarHidden {
+    display: none;
+  }
+}

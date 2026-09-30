@@ -1,0 +1,115 @@
+.composer {
+  padding: 10px 16px 14px;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+}
+
+.field {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  background: var(--bg-surface-alt);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 6px 6px 6px 10px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field:focus-within {
+  border-color: var(--max-purple-line);
+  box-shadow: 0 0 0 3px var(--max-purple-soft);
+}
+
+.fieldDisabled {
+  opacity: 0.62;
+}
+
+.textarea {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  resize: none;
+  background: transparent;
+  padding: 8px 0;
+  font-size: 14.5px;
+  line-height: 1.45;
+  max-height: 140px;
+  overflow-y: auto;
+}
+
+.textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.toolButton {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  color: var(--text-muted);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.toolButton:hover:not(:disabled) {
+  background: var(--bg-hover);
+  color: var(--max-purple);
+}
+
+.toolButton:disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+.sendButton {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--max-gradient);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(110, 63, 245, 0.3);
+  transition: filter 0.15s ease, transform 0.1s ease, opacity 0.15s ease;
+}
+
+.sendButton:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.sendButton:active:not(:disabled) {
+  transform: scale(0.94);
+}
+
+.sendButton:disabled {
+  background: var(--border-strong);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.counter {
+  margin-top: 6px;
+  text-align: right;
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+.counterOver {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.hintRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 6px;
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
